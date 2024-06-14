@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/style.css">
+</head>
+<body>
+    <h1>Dodaj novi recept</h1>
+    <% if(error) { %> 
+    <p> <%= error %> </p>
+    <% } %>
+
+    <form action="/addRecept" method="post">
+        <label for="brojRecepta">Broj recepta</label>
+        <input type="number" name="brojRecepta" id="brojRecepta">
+
+        <label for="recept">Unesi recept</label>
+        <input type="text" name="recept" id="recept">
+
+        <button type="submit">Dodaj</button>
+    </form>
+
+    <a href="/">Vrati se na početnu</a>
+</body>
+</html>
